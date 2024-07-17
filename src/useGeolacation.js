@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 export function useGeolocation(defaultPosition=null) {
-  const [loadingStatus, setLoadingStatus] = useState("idle");
+  const [loadingStatus, setLoadingStatus] = useState("idle");  
   const [error, setError] = useState(null);
   const [currentPosition, setCurrentPosition] = useState(defaultPosition);
   

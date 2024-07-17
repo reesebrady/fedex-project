@@ -3,7 +3,7 @@ import './Maps.css';
 
 const MapPage: React.FC = () => {
   useEffect(() => {
-    const loadScript = (src: string): Promise<void> => {
+    const loadScript = (src: string): Promise<void> => { 
       return new Promise<void>((resolve, reject) => {
         const script = document.createElement('script');
         script.src = src;
