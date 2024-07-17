@@ -1,15 +1,20 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import {BrowserRouter, Routes, Route} from "react-router-dom"
+import { MapPage } from './Pages/Map'
+import { HomePage } from './Pages/HomePage'
+import { PageNotFound } from './Pages/PageNotFound'
 
 function App() {
 
   return (
-    <>
-      <div>This is our react project</div>
-      <div>Ope, Surya, and Reese</div>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<HomePage/>}/>
+        <Route path='map' element={<MapPage/>}/>
+				<Route path='*' element={<PageNotFound/>}/>
+				</Routes>
+    </BrowserRouter>
   )
 }
 
